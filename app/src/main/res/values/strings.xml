@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Passcat</string>
+    <string name="get_password">Get Password</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="size">Size:</string>
+    <string name="signature">Signature</string>
+    <string name="root_word">Root Word</string>
+    <string name="copy">Copy</string>
+    <string name="generated_pass">Generated Password</string>
+    <string name="default_size">4</string>
+</resources>

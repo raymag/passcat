@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="20sp">
+
+        <EditText
+            android:id="@+id/root_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/root_word"
+            android:background="@color/colorLight"
+            android:inputType="text"
+            android:padding="10sp"
+            android:layout_marginBottom="20sp"
+            android:textSize="25sp"/>
+
+        <EditText
+            android:id="@+id/signature"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/signature"
+            android:background="@color/colorLight"
+            android:padding="10sp"
+            android:layout_marginBottom="20sp"
+            android:textSize="25sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/size"
+            android:textSize="25sp"
+            android:textColor="@color/colorLight"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="5sp">
+
+            <Button
+                android:id="@+id/minus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/minus"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorLight"
+                android:layout_marginEnd="20sp"/>
+            <TextView
+                android:id="@+id/size_label"
+                android:layout_width="80sp"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorLight"
+                android:textAlignment="center"
+                android:text="@string/default_size"/>
+            <Button
+                android:id="@+id/plus_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorLight"
+                android:text="@string/plus"
+                android:layout_marginStart="20sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/get_password_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_password"
+            android:textColor="@color/colorDark"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="60sp"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="15sp">
+
+            <EditText
+                android:id="@+id/gen_pass"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:background="@color/colorLight"
+                android:inputType="text"
+                android:hint="@string/generated_pass"
+                android:padding="10sp"
+                android:layout_marginEnd="10sp"/>
+
+            <Button
+                android:id="@+id/copy_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:padding="12sp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="@color/colorLight"
+                android:text="@string/copy"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
