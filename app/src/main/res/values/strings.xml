@@ -9,4 +9,17 @@
     <string name="copy">Copy</string>
     <string name="generated_pass">Generated Password</string>
     <string name="default_size">4</string>
+    <string name="help">Help?</string>
+    <string name="root_word_bold">Root Word:</string>
+    <string name="help_title">Help</string>
+    <string name="back">Back</string>
+    <string name="root_word_info">The key word that is going to generate the core of the password. That\'s the most important part of the password. So you must not forget it.</string>
+    <string name="signature_bold">Signature:</string>
+    <string name="signature_info">Signature is a sequence of characters that will be plainly present in your password. It\'s important that you use the same signature in all passwords and never show it to anyone.</string>
+    <string name="size_bold">Size:</string>
+    <string name="size_info">This controls how big the core part of the password is, the maximum value it can be is 32 and the minimum is 1. However, we recommend you to keep it as 4 (which means the core part will be 8 characters wide).</string>
+    <string name="about_passcat">About Passcat:</string>
+    <string name="about_passcat_info">This app is made for helping you in making unique and strong passwords based in a simple keyword. That way, you\'ll be able to recover the password as long as you remember the keyword and the settings you\'ve used.</string>
+    <string name="devby_bold">Developed by Raymag:</string>
+    <string name="devby_info">This app was developed by Raymag.</string>
 </resources>
