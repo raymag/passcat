@@ -10,6 +10,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:alpha=".6"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/help_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help"
+            android:layout_margin="20sp"
+            android:padding="5sp"
+            android:fontFamily="monospace"
+            android:textSize="20sp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorLight"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,6 +47,9 @@
             android:background="@color/colorLight"
             android:inputType="text"
             android:padding="10sp"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorLightDark"
+            android:textColorHighlight="@color/colorPrimaryDark"
             android:layout_marginBottom="20sp"
             android:textSize="25sp"/>
 
@@ -32,6 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/signature"
+            android:textColor="@color/colorDark"
+            android:textColorHint="@color/colorLightDark"
+            android:textColorHighlight="@color/colorPrimaryDark"
             android:background="@color/colorLight"
             android:padding="10sp"
             android:layout_marginBottom="20sp"
@@ -106,6 +136,9 @@
                 android:background="@color/colorLight"
                 android:inputType="text"
                 android:hint="@string/generated_pass"
+                android:textColor="@color/colorLightDark"
+                android:textColorHint="@color/colorLightDark"
+                android:textColorHighlight="@color/colorPrimaryDark"
                 android:padding="10sp"
                 android:layout_marginEnd="10sp"/>
 
@@ -117,8 +150,7 @@
                 android:padding="12sp"
                 android:background="@color/colorPrimaryDark"
                 android:textColor="@color/colorLight"
-                android:text="@string/copy"
-                />
+                android:text="@string/copy" />
         </LinearLayout>
 
     </LinearLayout>

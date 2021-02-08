@@ -3,6 +3,7 @@ package com.raymag.passcat
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         get_password_btn.setOnClickListener {genPassword()}
         copy_btn.setOnClickListener {copy()}
+        help_btn.setOnClickListener {help()}
     }
 
     private fun decreaseSize() {
@@ -32,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     private  fun increaseSize() {
         val currentSize: Int = size_label.text.toString().toInt()
-        if (currentSize < 10) {
+        if (currentSize < 32) {
             size_label.text = (currentSize + 1).toString()
         }
     }
@@ -43,6 +45,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun genPassword() {
+        if (root_word.text.toString().isEmpty() || signature.text.toString().isEmpty()) {
+            Toast.makeText(this, "Please fill all the fields", Toast.LENGTH_SHORT).show()
+            return
+        }
+        if (root_word.text.toString().length < 3) {
+            Toast.makeText(this, "Root Word must be at least 3 characters wide", Toast.LENGTH_SHORT).show()
+            return
+        }
         val hash: String = hashString(root_word.text.toString())
         val size: Int = size_label.text.toString().toInt()
 
@@ -63,5 +73,10 @@ class MainActivity : AppCompatActivity() {
         clipboard.setPrimaryClip(clip)
 
         Toast.makeText(this, "Text copied to clipboard", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun help() {
+        val intent = Intent(this, HelpActivity::class.java)
+        startActivity(intent)
     }
 }
